@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тея</title>
+    <link rel="stylesheet" href="./style/app.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container container_bg1 container_bg">
+        <header>
+          <nav>
+            <div class="mobile-navigation">
+              <div class="mobile-navigation__title">
+                <div class="mobile-navigation__link"><a href="#psyteya" onclick="closeMenu()">@psyteya</a></div>
+                <div class="mobile-navigation__burger">
+                 <img src="./images/svg/burger-open.svg" class="burger_open" alt="burger-open" onclick="openMenu()">
+                 <img src="./images/svg/burger-close.svg" class="burger_close" alt="burger-close" onclick="closeMenu()">
+                </div>
+              </div>
+              <div class="line"></div>
+              <ul class="mobile-navigation__menu">
+                <li>
+                  <a href="whatwork">С чем работаю</a>
+                </li>
+                <li>
+                  <a href="aboutme">Обо мне</a>
+                </li>
+                <li>
+                  <a href="education">Образование</a>
+                </li>
+                <li>
+                  <a href="consultation">Консультация</a>
+                </li>
+                <li>
+                  <a href="faq">FAQ</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="navigation">
+              <div class="navigation__link"><a href="#psyteya">@psyteya</a></div>
+              <ul class="navigation__menu">
+                <li>
+                  <a href="#whatwork">С чем работаю</a>
+                </li>
+                <li>
+                  <a href="#aboutme">Обо мне</a>
+                </li>
+                <li>
+                  <a href="#education">Образование</a>
+                </li>
+                <li>
+                  <a href="#consultation">Консультация</a>
+                </li>
+                <li>
+                  <a href="#faq">FAQ</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+
+        <section class="psyteya" id="psyteya">
+          <div class="psyteya__body">
+            <div class="psyteya__right-sidebar">
+              <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="./images/img1-large.png"
+                  type="image/png"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./images/img1-small.png"
+                  type="image/png"
+                />
+                <img src="./images/img1-large.png" alt="image me" />
+              </picture>
+            </div>
+            <div class="psyteya__left-sidebar">
+              <div class="psyteya__hash">
+                // Психотерапевт, клинический психолог
+              </div>
+              <h2 class="psyteya__title title">Тэя Заря</h2>
+              <ul class="lists lists_mg lists_gap30 lists_w358">
+                <li class="lists__item">Образование МГУ</li>
+                <li class="lists__item">Более 9 лет практики</li>
+                <li class="lists__item">
+                  Медицинский психолог в научном центре психического здоровья
+                </li>
+              </ul>
+              <a href="#" class="psyteya__button">Записаться</a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="container">
+        <section class="whatwork" id="whatwork">
+          <h2 class="whatwork__title title">С чем я работаю</h2>
+          <div class="whatwork__body">
+            <div class="whatwork__left-sidebar">
+              <ul class="lists lists_gap60 lists_w288">
+                <li class="lists__item">
+                  Постоянное чувство тревоги, депрессивные, подавленные
+                  состояния
+                </li>
+                <li class="lists__item">
+                  Непонимание себя, чего хочется и хочется ли вообще
+                </li>
+                <li class="lists__item">Страх, стыд, обида, вина, гнев</li>
+              </ul>
+            </div>
+            <div class="whatwork__centr">
+              <img src="./images/img2-large.png" alt="" />
+            </div>
+            <div class="whatwork__right-sidebar">
+              <ul class="lists lists_gap60 lists_w288">
+                <li class="lists__item">
+                  Неуверенность в себе, в своих силах, низкая самооценка
+                </li>
+                <li class="lists__item">
+                  Научиться справляться со своими эмоциями
+                </li>
+                <li class="lists__item">
+                  Перепады настроения, чувство одиночества
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="whatwork__body_mobile">
+            <picture>
+              <source
+                media="(min-width: 1440px)"
+                srcset="./images/img2-large.png"
+                type="image/png"
+              />
+              <source
+                media="(max-width: 768px)"
+                srcset="./images/img2-small.png"
+                type="image/png"
+              />
+              <img src="./images/img2-large.png" alt="image me" />
+            </picture>
+
+            <ul class="lists lists_gap15">
+              <li class="lists__item">
+                Постоянное чувство тревоги, депрессивные, подавленные состояния
+              </li>
+              <li class="lists__item">
+                Непонимание себя, чего хочется и хочется ли вообще
+              </li>
+              <li class="lists__item">Страх, стыд, обида, вина, гнев</li>
+              <li class="lists__item">
+                Неуверенность в себе, в своих силах, низкая самооценка
+              </li>
+              <li class="lists__item">
+                Научиться справляться со своими эмоциями
+              </li>
+              <li class="lists__item">
+                Перепады настроения, чувство одиночества
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <div class="container container_bg2 container_bg">
+        <section class="aboutme" id="aboutme">
+          <div class="aboutme__title title">Обо мне</div>
+          <div class="aboutme__body">
+            <div class="aboutme__left-sidebar">
+              <ul class="lists lists_gap20 read-more read-more_mh358">
+                <li class="item">
+                  — Я Тэя Заря, дипломированный психолог, эксперт в сфере работы
+                  с дискомфортными чувствами.
+                </li>
+                <li class="item">
+                  Моё образование помогает мне комплексно работать с различными
+                  запросами (различными сферами), а авторская методика решать
+                  один запрос в 80% случаев за пару сессий.
+                </li>
+                <li class="item">
+                  Более 9 лет веду частную практику консультирования и
+                  немедицинской психотерапии.
+                </li>
+                <li class="item">
+                  На данный момент работаю медицинским психологом в Научном
+                  центре психического здоровья.
+                </li>
+                <li class="item">
+                  Помогаю клиентам чувствовать себя спокойно и уверенно при
+                  решении повседневных задач и выполнении ключевых действий.
+                </li>
+                <li class="item">
+                  Специализируюсь на работе со страхами, неуверенностью,
+                  перенапряжением, эмоциональным выгоранием, переживанием
+                  синдрома самозванца.
+                </li>
+                <li class="item">
+                  Я придерживаюсь научного подхода, принципов работы мозга и
+                  психики. Преимущественно работаю методом психотерапевтической
+                  беседы.
+                </li>
+              </ul>
+              <button class="btn btn_mt10 btn_read-more1" onclick="readMore()">
+                Читать далее
+              </button>
+              <button
+                class="btn btn_mt10 btn_hide1"
+                onclick="readMore('358px')"
+              >
+                Скрыть
+              </button>
+            </div>
+            <div class="aboutme__right-sidebar">
+              <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="./images/img3-large.png"
+                  type="image/png"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./images/img3-small.png"
+                  type="image/png"
+                />
+                <img src="./images/img3-large.png" alt="image me" />
+              </picture>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="container">
+        <section class="education" id="education">
+          <div class="education__title title">Образование</div>
+          <div class="education__body">
+            <div class="education__left-sidebar">
+              <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="./images/img4-large.png"
+                  type="image/png"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./images/img4-small.png"
+                  type="image/png"
+                />
+                <img src="./images/img4-large.png" alt="image me" />
+              </picture>
+            </div>
+            <div class="education__right-sidebar">
+              <ul class="lists lists_gap20 read-more read-more_mh500">
+                <li class="lists__item">
+                  В 2014 году окончила МГУ Ломоносова по специальности 
+                  «Клинический психолог. Психолог. Преподаватель психологии» с
+                  правом ведения немедицинской психотерапии
+                </li>
+                <li class="lists__item">
+                  В 2015 году прошла повышение квалификации в Московском
+                  Институте психоанализа по направлению «суггестивная
+                  психология» (Эриксоновский гипноз)
+                </li>
+                <li class="lists__item">
+                  В 2015 году прошла повышение квалификации в Московском
+                  Институте психоанализа по направлению «Сексология 21 века» у
+                  Александра Полеева
+                </li>
+                <li class="lists__item">
+                  В 2016 году прошла повышение квалификации «Гипнотерапия
+                  психосоматических расстройств»
+                </li>
+                <li class="lists__item">
+                  С 2018 по 2019 прошла профессиональную переподготовку
+                  «Перинатальный психолог. Психологическое сопровождение женщин
+                  со сложностями в репродуктивной сфере»
+                </li>
+                <li class="lists__item">
+                  С 2019 по 2021 вела профессиональный блог mamasays_yes,
+                  который помогал женщинам обрести счастье материнства, пик
+                  аудитории 12 тыс. подписчиков
+                </li>
+                <li class="lists__item">
+                  В 2019 году прошла повышение квалификации «Психосоматические
+                  нарушения в репродуктивной системе. Стратегии и тактики
+                  психологической помощи женщинам с диагнозом бесплодие»
+                </li>
+                <li class="lists__item">
+                  В 2020 прошла повышение квалификации в международном институте
+                  практической психологии по направлению «проработка
+                  психосоматики»
+                </li>
+                <li class="lists__item">
+                  «Проработка навязчивостей и негативных убеждений» 
+                </li>
+                <li class="lists__item">
+                  Член Национальной Ассоциации специалистов по психосоматике с
+                  присвоением квалификации сертифицированный психосоматолог
+                </li>
+              </ul>
+              <button class="btn btn_mt10 btn_read-more2" onclick="readMore2()">
+                Читать далее
+              </button>
+              <button
+                class="btn btn_mt10 btn_hide2"
+                onclick="readMore2('500px')"
+              >
+                Скрыть
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="container container_bg3 container_bg">
+        <section class="consultation" id="consultation">
+          <div class="consultation__title title">Консультация</div>
+          <div class="consultation__body">
+            <div class="consultation__left-sidebar">
+              <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="./images/img5-large.png"
+                  type="image/png"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./images/img5-small.png"
+                  type="image/png"
+                />
+                <img src="./images/img5-large.png" alt="image me" />
+              </picture>
+            </div>
+            <div class="consultation__right-sidebar">
+              <ul class="lists lists_gap30">
+                <li class="lists__arrow-item">Онлайн сессия по видеосвязи</li>
+                <li class="lists__arrow-item">Сессия длится 1 час</li>
+                <li class="lists__arrow-item">Максимально бережный подход</li>
+              </ul>
+              <div class="consultation__record">
+                <p class="consultation__text">6 000 руб.</p>
+                <a href="#" class="psyteya__button consultation__button"
+                  >Записаться</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="container">
+        <section class="faq" id="faq">
+          <div class="faq__body">
+            <div class="faq__left-sidebar">
+              <div class="faq__title title">faq</div>
+              <ul class="lists">
+                <li class="lists__check" id="item1">
+                  С какими запросами работаете?
+                  <div class="lists__dopInfo">
+                    Работаю с различными запросами (различными сферами), а
+                    авторская методика решать один запрос в 80% случаев за пару
+                    сессий.
+                  </div>
+                </li>
+                <li class="lists__check" id="item2">
+                  Чем мне может помочь психолог?
+                  <div class="lists__dopInfo">
+                    Психолог может помочь нам разрешить конфликты, справиться с
+                    тревогой и стрессом, улучшить наши отношения, повысить
+                    самооценку и достичь личностного роста.
+                  </div>
+                </li>
+                <li class="lists__check" id="item3">
+                  Можно ли придти на приём с мужем?
+                  <div class="lists__dopInfo">
+                    Да. На семейной психологической сессии психолог не только
+                    помогает наладить семейные взаимоотношения, но и учит
+                    предотвращать спорные ситуации.
+                  </div>
+                </li>
+                <li class="lists__check" id="item4">
+                  Как понять что мне нужна консультация?
+                  <ul class="lists__dopInfo">
+                    5 признаков, что вам пора обратиться к психологу
+                    <li class="lists__list_li">
+                      Вам кажется, что вы ходите по кругу
+                    </li>
+                    <li class="lists__list_li">
+                      У вас резко изменился образ жизни и режим дня
+                    </li>
+                    <li class="lists__list_li">Вас все раздражает</li>
+                    <li class="lists__list_li">Вы слишком много работаете</li>
+                    <li class="lists__list_li">
+                      Вы делаете много рискованных поступков
+                    </li>
+                  </ul>
+                </li>
+                <li class="lists__check" id="item5">
+                  Сколько всего нужно консультаций?
+                  <div class="lists__dopInfo">
+                    Обычно консультации проходят 1 раз в неделю. При острых
+                    ситуациях можно видеться чаще. По завершении регулярных
+                    встреч можно встречаться реже: раз в месяц.
+                  </div>
+                </li>
+              </ul>
+              <a href="#" class="psyteya__button faq__button">Задать вопрос</a>
+            </div>
+            <div class="faq__right-sidebar">
+              <img src="./images/img6-large.png" alt="faq" />
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="container container_bg container_bg4">
+        <footer class="footer">
+          <div class="footer__body">
+            <div class="footer__card footer__card1">
+              <div class="footer__title">
+                <a href="#"
+                  ><img src="./images/svg/psetya.svg" alt="psetya"
+                /></a>
+              </div>
+              <p class="footer__text">
+                Тэя Заря — психотерапевт, клинический психолог
+              </p>
+              <p class="footer__protected">© Все права защищены</p>
+            </div>
+            <ul class="lists footer__card footer__card2">
+              <li><a href="#whatwork">С чем работаю</a></li>
+              <li><a href="#aboutme">Обо мне</a></li>
+              <li><a href="#education">Образование</a></li>
+            </ul>
+            <ul class="lists footer__card footer__card3">
+              <li><a href="#consultation">Kонсультация</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="footer__card footer__card4">
+              <div class="footer__number">89683930068</div>
+              <div class="footer__address">
+                г. Москва, Каширское шоссе, дом 34
+              </div>
+              <div class="footer__terms-of-use">
+                Пользовательское соглашение
+              </div>
+              <div class="footer__messanger">
+                <a href="https://www.viber.com/ru/" target="_blank">
+                  <img src="./images/svg/viber.svg" alt="viber" />
+                </a>
+                <a href="https://web.telegram.org/k/" target="_blank">
+                  <img src="./images/svg/telegramm.svg" alt="telegramm" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
