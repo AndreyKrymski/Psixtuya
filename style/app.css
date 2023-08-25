@@ -53,45 +53,44 @@ a {
   background-image: url("../images/bg4-large.png");
 }
 
-.navigation {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
   border-bottom: 1px solid #e6d1bf;
 }
-.navigation__menu {
+.nav.active {
+  height: 100vh;
+}
+.nav.active .nav__menu {
+  display: flex;
+}
+.nav.active .nav__burger_close {
+  display: block;
+}
+.nav.active .nav__burger_open {
+  display: none;
+}
+.nav__link {
+  font-size: 18px;
+  color: #bb865f;
+}
+.nav__menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
   gap: 30px;
 }
-.navigation__link {
-  font-size: 18px;
-  color: #bb865f;
-}
-
-.mobile-navigation {
+.nav__burger {
   display: none;
 }
-.mobile-navigation__title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px 0 18px;
+.nav__burger_open {
+  display: block;
 }
-.mobile-navigation__menu {
+.nav__burger_close {
   display: none;
-  height: 100vh;
-  margin-top: 11px;
-  list-style-type: none;
-  flex-direction: column;
-  gap: 15px;
-}
-.mobile-navigation__link {
-  font-size: 18px;
-  color: #bb865f;
 }
 
 .line {
@@ -103,13 +102,6 @@ a {
   height: 1px;
   background-color: #e6d1bf;
   transform: translateY(-50%);
-}
-
-.burger_open {
-  display: block;
-}
-.burger_close {
-  display: none;
 }
 
 .header__nav {
@@ -162,6 +154,10 @@ a {
 }
 .psyteya__button:hover {
   background-color: #dbaa85;
+  transition: background-color 0.5s ease-in-out;
+}
+.psyteya .lists {
+  width: 358px;
 }
 
 .lists {
@@ -183,9 +179,6 @@ a {
 }
 .lists_w288 {
   width: 288px;
-}
-.lists_w358 {
-  width: 358px;
 }
 .lists_mg {
   margin-bottom: 60px;
@@ -212,6 +205,7 @@ a {
 }
 .lists__check.active {
   background-image: url("../images/svg/close-checkbox-item.svg");
+  font-weight: 700;
 }
 .lists__dopInfo {
   display: none;
@@ -262,6 +256,33 @@ a {
   font-weight: 700;
   margin-bottom: 20px;
 }
+.aboutme .lists {
+  gap: 20px;
+}
+.aboutme button {
+  margin-top: 10px;
+}
+
+.read__all {
+  max-height: 358px;
+  overflow: hidden;
+}
+.read__open {
+  display: inline;
+}
+.read__close {
+  display: none;
+}
+.read.active .read__all {
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+.read.active .read__open {
+  display: none;
+}
+.read.active .read__close {
+  display: inline;
+}
 
 .btn {
   font-family: "Mulish", sans-serif;
@@ -270,38 +291,13 @@ a {
   border-bottom: 1px solid #363845;
   background: inherit;
 }
-.btn_mt10 {
-  margin-top: 10px;
-}
-.btn_hide1 {
-  display: none;
-}
-.btn_read-more1 {
-  display: inline;
-}
-.btn_hide2 {
-  display: none;
-}
-.btn_read-more2 {
-  display: inline;
-}
-
-.read-more {
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-}
-.read-more_mh358 {
-  max-height: 358px;
-}
-.read-more_mh500 {
-  max-height: 500px;
-}
 
 /*_____________________________________________________________education___________________________________________________________________*/
 .education {
   padding-bottom: 120px;
 }
 .education .lists {
+  gap: 20px;
   list-style-type: decimal;
   padding-left: 30px;
 }
@@ -319,6 +315,30 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 72px;
+}
+.education button {
+  margin-top: 10px;
+}
+
+.edd-read__all {
+  max-height: 558px;
+  overflow: hidden;
+}
+.edd-read__open {
+  display: inline;
+}
+.edd-read__close {
+  display: none;
+}
+.edd-read.active .edd-read__all {
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+.edd-read.active .edd-read__open {
+  display: none;
+}
+.edd-read.active .edd-read__close {
+  display: inline;
 }
 
 /*______________________________________________________________________________consultation_________________________________________*/
@@ -485,7 +505,7 @@ a {
   .container_bg2 {
     background-position: bottom;
   }
-  .navigation__menu {
+  .nav__menu {
     gap: 15px;
   }
   .psyteya {
@@ -572,15 +592,29 @@ a {
   .container {
     padding: 0 25px;
   }
-  .navigation {
-    display: none;
-  }
-  .mobile-navigation {
-    display: block;
-  }
-  .flex {
+  /*____________________________________________________*/
+  .nav {
+    flex-direction: column;
+    position: relative;
     display: flex;
-    height: 100vh;
+    align-items: flex-start;
+    gap: 30px;
+    border-bottom: none;
+    justify-content: flex-start;
+  }
+  .nav__link {
+    width: 100%;
+  }
+  .nav__menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav__burger {
+    display: block;
+    position: absolute;
+    top: auto;
+    right: 0;
   }
   .overflow {
     overflow-y: hidden;

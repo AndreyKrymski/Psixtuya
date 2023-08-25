@@ -1,79 +1,64 @@
 const elements = {
-  burgerOpen: document.querySelector('.burger_open'),
-  burgerClose: document.querySelector('.burger_close'),
-  menu: document.querySelector('.mobile-navigation__menu'),
-  line: document.querySelector('.line'),
+  menu: document.querySelector('.nav'),
+  burgerBtn: document.querySelectorAll('.nav img'),
+  menuLinks: document.querySelectorAll('.nav a'),
+
   html: document.querySelector('html'),
-  readMoreButton: document.querySelector('.btn_read-more1'),
-  hideButton: document.querySelector('.btn_hide1'),
 
-  readMoreButton2: document.querySelector('.btn_read-more2'),
-  hideButton2: document.querySelector('.btn_hide2'),
+  readAbout: document.querySelector('.read'),
+  readAboutBtns: document.querySelectorAll('.read button'),
 
-  readMoreDiv: document.querySelector('.read-more_mh358'),
-  readMoreDiv2: document.querySelector('.read-more_mh500'),
+  readEdd: document.querySelector('.edd-read'),
+  readEddBtns: document.querySelectorAll('.edd-read button'),
+
+
+  line: document.querySelector('.line'),
 
   listsCheck: document.querySelectorAll('.lists__check'),
 
   counters: {},
 }
 
-
-function openMenu() {
-  elements.menu.style.display = 'flex'
-  elements.burgerClose.style.display = 'block'
-  elements.burgerOpen.style.display = 'none'
-  elements.line.style.display = 'block'
-  elements.html.classList.add('overflow')
-}
-function closeMenu() {
-  elements.menu.style.display = 'none'
-  elements.burgerClose.style.display = 'none'
-  elements.burgerOpen.style.display = 'block'
-  elements.line.style.display = 'none'
-  elements.html.classList.remove('overflow')
+const toggleMenu = () => {
+  elements.menu.classList.toggle('active')
+  elements.html.classList.toggle('overflow')
 }
 
-document.querySelectorAll('.mobile-navigation li').forEach((item) => {
-  item.addEventListener('click', (e) => {
-    e.preventDefault();
-    const hre = item.querySelector('a')
-    const section = document.getElementById(hre.getAttribute('href'))
-    section.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest'
-    })
-    closeMenu()
+const readAbout = () => {
+  elements.readAbout.classList.toggle('active')
+}
+
+const readEdd = () => {
+  elements.readEdd.classList.toggle('active')
+}
+
+elements.burgerBtn.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault(),
+    toggleMenu()
   })
 })
 
+elements.menuLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    elements.html.classList.remove('overflow')
+    elements.menu.classList.remove('active')
+  })
+})
 
+elements.readAboutBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    readAbout()
+  })
+})
 
-
-function readMore(height) {
-  if (height) {
-    elements.readMoreDiv.style.maxHeight = height;
-    elements.readMoreButton.style.display = 'inline';
-    elements.hideButton.style.display = 'none';
-  } else {
-    elements.readMoreDiv.style.maxHeight = 'none'
-    elements.readMoreButton.style.display = 'none';
-    elements.hideButton.style.display = 'inline';
-  }
-}
-
-function readMore2(height) {
-  if (height) {
-    elements.readMoreDiv2.style.maxHeight = height;
-    elements.readMoreButton2.style.display = 'inline';
-    elements.hideButton2.style.display = 'none';
-  } else {
-    elements.readMoreDiv2.style.maxHeight = 'none'
-    elements.readMoreButton2.style.display = 'none';
-    elements.hideButton2.style.display = 'inline';
-  }
-}
+elements.readEddBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    readEdd()
+  })
+})
 
 
 elements.listsCheck.forEach((item) => {
