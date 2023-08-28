@@ -65,23 +65,27 @@ a {
 .nav.active {
   gap: 30px;
   height: 100vh;
+  transition: all 0.4s ease-in;
 }
 .nav.active .nav__menu {
   opacity: 1;
   visibility: visible;
   max-height: -moz-fit-content;
   max-height: fit-content;
+  transition: all 0.4s ease-in;
 }
 .nav.active .nav__burger_close {
   opacity: 1;
   visibility: visible;
   max-height: -moz-fit-content;
   max-height: fit-content;
+  transition: all 0.4s ease-in;
 }
 .nav.active .nav__burger_open {
   opacity: 0;
   visibility: hidden;
   max-height: 0;
+  transition: all 0.4s ease-in;
 }
 .nav__link {
   font-size: 18px;
@@ -226,7 +230,7 @@ a {
 .lists__check.active {
   background-image: url("../images/svg/close-checkbox-item.svg");
   font-weight: 700;
-  transition: all 0.5s ease-in;
+  transition: background-image 0.5s ease-in;
 }
 .lists__check.active .lists__dopInfo {
   max-height: -moz-fit-content;
@@ -234,14 +238,14 @@ a {
   opacity: 1;
   visibility: visible;
   margin-top: 20px;
-  transition: all 0.5s ease-in;
+  transition: margin-top 0.4s ease-in, opacity 0.3s ease-in 0.2s;
 }
 .lists__dopInfo {
   max-height: 0;
-  opacity: 1;
+  opacity: 0;
   visibility: hidden;
   margin-top: 0px;
-  transition: all 0.1s ease-in;
+  transition: opacity 0.2s linear, margin-top 0.2s ease-in 0.1s;
 }
 .lists__list_li {
   margin-left: 40px;
@@ -633,7 +637,7 @@ a {
     border-bottom: none;
     justify-content: flex-start;
     gap: 0px;
-    transition: gap 0.3s ease-in;
+    transition: gap 1s ease-in;
   }
   .nav__link {
     width: 100%;
@@ -642,9 +646,9 @@ a {
     opacity: 0;
     visibility: hidden;
     max-height: 0;
-    transition: all 0.3s ease-in;
     flex-direction: column;
     align-items: flex-start;
+    transition: opacity 0.3s ease-in, max-height 0.4s ease-in 0.5s;
   }
   .nav__burger {
     display: block;
