@@ -6,17 +6,15 @@ const elements = {
   html: document.querySelector('html'),
 
   readAbout: document.querySelector('.read'),
+  readAll: document.querySelector('.read__all'),
   readAboutBtns: document.querySelectorAll('.read button'),
 
   readEdd: document.querySelector('.edd-read'),
+  readEddAll: document.querySelector('.edd-read__all'),
   readEddBtns: document.querySelectorAll('.edd-read button'),
 
-
   line: document.querySelector('.line'),
-
   listsCheck: document.querySelectorAll('.lists__check'),
-
-  counters: {},
 }
 
 const toggleMenu = () => {
@@ -26,16 +24,28 @@ const toggleMenu = () => {
 
 const readAbout = () => {
   elements.readAbout.classList.toggle('active')
+  if (elements.readAbout.classList.contains('active')) {
+    const contentHeight = elements.readAll.scrollHeight;
+    elements.readAll.style.maxHeight = contentHeight + 'px';
+  } else {
+    elements.readAll.style.maxHeight = '358px';
+  }
 }
 
 const readEdd = () => {
   elements.readEdd.classList.toggle('active')
+  if (elements.readEdd.classList.contains('active')) {
+    const contentHeight = elements.readEddAll.scrollHeight;
+    elements.readEddAll.style.maxHeight = contentHeight + 'px';
+  } else {
+    elements.readEddAll.style.maxHeight = '558px';
+  }
 }
 
 elements.burgerBtn.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.preventDefault(),
-    toggleMenu()
+      toggleMenu()
   })
 })
 
@@ -60,31 +70,14 @@ elements.readEddBtns.forEach((btn) => {
   })
 })
 
-
 elements.listsCheck.forEach((item) => {
-  elements.counters[item.id] = 0;
   item.addEventListener('click', (e) => {
-
-    e.preventDefault();
-    const counter = elements.counters[item.id];
-    const dopInfo = e.target.querySelector('.lists__dopInfo')
-
-    if (counter % 2 === 0) {
-      dopInfo.style.display = 'block'
-    } else {
-      dopInfo.style.display = 'none'
-    }
+    e.preventDefault()
+    elements.listsCheck.forEach((li) => {
+      if (li !== item) {
+        li.classList.remove('active');
+      }
+    })
     item.classList.toggle('active')
-
-    elements.counters[item.id]++;
-
   })
 })
-
-
-
-
-
-
-
-
